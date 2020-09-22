@@ -1,0 +1,3 @@
+﻿  FactoryMethod.cpp
+G:\Design-Patterns-C-\FactoryMethod\FactoryMethod.cpp(83,23): warning C4018: <: несоответствие типов со знаком и без знака
+  FactoryMethod.vcxproj -> G:\Design-Patterns-C-\FactoryMethod\Debug\FactoryMethod.exe
