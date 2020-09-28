@@ -1,86 +1,66 @@
 ﻿#include <iostream>
-#include <vector>
+#include <memory>
 using namespace std;
 
-// Иерархия классов игровых персонажей
-class Warrior
+class Product;
+
+// Фабрика для создания продукта
+#pragma region Creator
+class Creator 
 {
 public:
-    virtual void info() = 0;
-    virtual ~Warrior() {}
+    virtual unique_ptr<Product> createProduct() = 0;
 };
 
-class Infantryman : public Warrior
+// к типу продукта мы не привязываемся в фабрике
+template <typename Tprod>
+class ConCreator : public Creator
 {
 public:
-    void info() {
-        cout << "Infantryman" << endl;
-    };
-};
-
-class Archer : public Warrior
-{
-public:
-    void info() {
-        cout << "Archer" << endl;
-    };
-};
-
-class Horseman : public Warrior
-{
-public:
-    void info() {
-        cout << "Horseman" << endl;
-    };
-};
-
-
-// Фабрики объектов
-class Factory
-{
-public:
-    virtual Warrior* createWarrior() = 0;
-    virtual ~Factory() {}
-};
-
-class InfantryFactory : public Factory
-{
-public:
-    Warrior* createWarrior() {
-        return new Infantryman;
+    virtual unique_ptr<Product> createProduct() override
+    {
+        return unique_ptr<Product>(new Tprod());
     }
 };
+#pragma endregion
 
-class ArchersFactory : public Factory
+// Класс продукта
+#pragma region Product
+class Product 
 {
 public:
-    Warrior* createWarrior() {
-        return new Archer;
-    }
+    virtual ~Product() = 0;
+    virtual void run() = 0;
 };
 
-class CavalryFactory : public Factory
+Product::~Product() {}
+
+class ConProduct1 : public Product
 {
 public:
-    Warrior* createWarrior() {
-        return new Horseman;
-    }
+    virtual ~ConProduct1() override { cout << "ConProduct1 destructor" << endl; }
+    virtual void run() override { cout << "ConProduct1 method run" << endl; }
 };
 
+class ConProduct2 : public Product
+{
+public:
+    virtual ~ConProduct2() override { cout << "ConProduct2 destructor" << endl; }
+    virtual void run() override { cout << "ConProduct2 method run" << endl; }
+};
 
-// Создание объектов при помощи фабрик объектов
+#pragma endregion
+
 int main()
 {
-    InfantryFactory* infantry_factory = new InfantryFactory;
-    ArchersFactory* archers_factory = new ArchersFactory;
-    CavalryFactory* cavalry_factory = new CavalryFactory;
+    // ссылка на конкретную фабрику, создающую объекты конкретного типа
+    shared_ptr<Creator> cr1(new ConCreator<ConProduct1>());
+    shared_ptr<Creator> cr2(new ConCreator<ConProduct2>());
 
-    vector<Warrior*> v;
-    v.push_back(infantry_factory->createWarrior());
-    v.push_back(archers_factory->createWarrior());
-    v.push_back(cavalry_factory->createWarrior());
+    // ссылка на продукт, который создается через фабрику и конкретный тип продукта
+    shared_ptr<Product> ptr1 = cr1->createProduct();
+    shared_ptr<Product> ptr2 = cr2->createProduct();
 
-    for (int i = 0; i < v.size(); i++)
-        v[i]->info();
-    // ...
+    ptr1->run();
+    ptr2->run();
 }
