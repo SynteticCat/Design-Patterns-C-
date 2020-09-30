@@ -1,0 +1,2 @@
+G:\Design-Patterns-C-\Singleton\Debug\Singleton.exe
+G:\Design-Patterns-C-\Singleton\Debug\Singleton.pdb
