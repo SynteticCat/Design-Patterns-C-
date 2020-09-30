@@ -1,0 +1,2 @@
+G:\Design-Patterns-C-\ObjectPull\Debug\ObjectPull.exe
+G:\Design-Patterns-C-\ObjectPull\Debug\ObjectPull.pdb
