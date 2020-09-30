@@ -1,0 +1,2 @@
+G:\Design-Patterns-C-\Adapter\Debug\Adapter.exe
+G:\Design-Patterns-C-\Adapter\Debug\Adapter.pdb
