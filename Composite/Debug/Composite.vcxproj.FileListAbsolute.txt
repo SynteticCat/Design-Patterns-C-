@@ -1,0 +1,2 @@
+G:\Design-Patterns-C-\Composite\Debug\Composite.exe
+G:\Design-Patterns-C-\Composite\Debug\Composite.pdb
