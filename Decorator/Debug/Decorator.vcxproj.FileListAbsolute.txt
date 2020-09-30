@@ -1,0 +1,2 @@
+G:\Design-Patterns-C-\Decorator\Debug\Decorator.exe
+G:\Design-Patterns-C-\Decorator\Debug\Decorator.pdb
