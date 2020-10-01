@@ -1,0 +1,2 @@
+G:\Design-Patterns-C-\Facade\Debug\Facade.exe
+G:\Design-Patterns-C-\Facade\Debug\Facade.pdb
