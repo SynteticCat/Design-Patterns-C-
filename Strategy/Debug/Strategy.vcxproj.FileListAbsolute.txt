@@ -1,0 +1,2 @@
+G:\Design-Patterns-C-\Strategy\Debug\Strategy.exe
+G:\Design-Patterns-C-\Strategy\Debug\Strategy.pdb
