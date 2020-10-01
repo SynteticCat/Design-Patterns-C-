@@ -1,0 +1,2 @@
+G:\Design-Patterns-C-\Visitor\Debug\Visitor.exe
+G:\Design-Patterns-C-\Visitor\Debug\Visitor.pdb
