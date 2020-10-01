@@ -1,0 +1,2 @@
+G:\Design-Patterns-C-\Memento\Debug\Memento.exe
+G:\Design-Patterns-C-\Memento\Debug\Memento.pdb
