@@ -1,0 +1,2 @@
+G:\Design-Patterns-C-\Proxy\Debug\Proxy.exe
+G:\Design-Patterns-C-\Proxy\Debug\Proxy.pdb
