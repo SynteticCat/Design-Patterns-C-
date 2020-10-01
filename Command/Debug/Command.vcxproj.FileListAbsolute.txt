@@ -1,0 +1,2 @@
+G:\Design-Patterns-C-\Command\Debug\Command.exe
+G:\Design-Patterns-C-\Command\Debug\Command.pdb
