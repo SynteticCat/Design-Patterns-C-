@@ -1,0 +1,2 @@
+G:\Design-Patterns-C-\Bridge\Debug\Bridge.exe
+G:\Design-Patterns-C-\Bridge\Debug\Bridge.pdb
