@@ -1,0 +1,2 @@
+G:\Design-Patterns-C-\Publish Subscribe\Debug\Publish Subscribe.exe
+G:\Design-Patterns-C-\Publish Subscribe\Debug\Publish Subscribe.pdb
